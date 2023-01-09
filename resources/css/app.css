@@ -2,3 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
+.container{
+    padding-top: 20ems 20ems 20ems 20ems;
+}

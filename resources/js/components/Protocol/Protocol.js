@@ -2,10 +2,14 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 class Protocol extends Component {
+   
     render(){
+        const protocolStyle = {
+            padding:"10px",
+        }
     return (
-    <div class="container">
-            <img src="https://www.paymentsjournal.com/wp-content/uploads/2022/04/1661-scaled-e1649434277532.jpg" class="img-fluid"></img>
+    <div class="container" >
+            <img src="protocol.png"/>
     </div>
                
     )};
