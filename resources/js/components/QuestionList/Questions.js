@@ -34,8 +34,8 @@ class Questions extends Component {
             position:"10px"
         }
     return (
-        <div class="container"style={myStyle} >
-        <div class="accordion" id="accordionExample">
+        <div className="container"style={myStyle} >
+        <div className="accordion" id="accordionExample">
             {
                 this.state.questions.map(function(x,i){
                     return <QuestionRow key={i} data={x}/>

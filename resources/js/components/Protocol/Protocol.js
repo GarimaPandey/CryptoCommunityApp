@@ -5,11 +5,11 @@ class Protocol extends Component {
    
     render(){
         const protocolStyle = {
-            padding:"10px",
+            paddingBottom:"30px",
         }
     return (
-    <div class="container" >
-            <img src="protocol.png"/>
+    <div className="container" style={protocolStyle}>
+            <img src="protocol.png" className="img-fluid"/>
     </div>
                
     )};
