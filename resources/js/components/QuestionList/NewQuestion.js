@@ -45,15 +45,38 @@ class NewQuestion extends Component{
         })
       }
       render(){
+        const myBtn = {
+          display:"flex",
+          flexDirection:"row",
+          justifyContent:"center",
+          alignItems:"center",
+          width:"112px",
+          height:"30px",
+          backgroundColor:"#6074DD",
+          gap:"4px",
+          padding:"8px 12px",
+          position:"absolute",
+          top:"29px",
+          border:"1px solid #6074DD",
+          boxShadow:"0px 4px 8px",
+          borderRadius:"25px",
+          fontFamily:"Poppins",
+          fontStyle:"normal",
+          fontWeight:"400",
+          fontSize:"12px",
+          lineHeight:"14px",
+          color:"#FFFFFF",
+        }
         return(
+         
           <>
           <div className='row text-right mb-3 pb-3'>
                 <button className='btn btn-info text-right col-3 offset-md-9'
+                style={myBtn}
                 data-toggle="modal"
                 data-target="#modalCreate"
-                
                 >
-                New Question
+                Ask a question
                 </button>
           </div>
            <div className="modal fade" id="modalCreate" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
