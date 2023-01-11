@@ -10,32 +10,74 @@ class QuestionRow extends Component {
     }
 render()
  {   
+    const myStyle={
+        display:"flex",
+        flexDirection:"column",
+        alignItems:"flex-start",
+        background:"#FFFFFF",
+        borderRadius:"25px",
+        height:"274px",
+        width:"751px",
+        borderRadius:"25px",
+        padding:"24px",
+        margin:"24px",
+    }
+    const fontStyle={
+        fontFamily:"Poppins",
+        fontStyle:"normal",
+        fontWeight:"700",
+        fontSize:"16px",
+        lineHeight:"24px",
+        color:"#34324C",
+    }
+    const contentStyle={
+        fontFamily:"Poppins",
+        fontStyle:"normal",
+        fontSize:"16px",
+        lineHeight:"24px",
+        width:"703px",
+        height:"72px",
+        fontWeight:"400"
+    }
+
+    const askedStyle = {
+        //styleName: Messages/ Title;
+        position: "absolute",
+        fontFamily:"Poppins",
+        fontSize: "12px",
+        fontStyle:"normal",
+        fontWeight: "700",
+        lineHeight: "14px",
+        letterSpacing:"0em",
+        textAlign:"left",
+        color: "#34324C",
+        padding:"2px"
+    }
+
+    const userImage = {
+        width: "48px",
+        height: "48px",
+        paddingTop:"4px",
+        // background: "url(moonbirds-1000x1000.png)",
+        borderRadius: "157.75px",
+    }
  return (
-        <div className="accordion-item" >
-            <h2 className="accordion-header" id="headingOne">
-                <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    <h5>
+    <div style={myStyle}>
+        <p style={fontStyle}>
                         {this.props.data.question}
-                    </h5>               
-                     </button>
-            </h2>
-            <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                <div className="accordion-body">
-                <h5> {this.props.data.description}</h5>
+            </p>
+            <div>
+                <p style={contentStyle}> {this.props.data.description}</p>
                 <hr/>
                 <div className="container">
+                        <div className="row"style={askedStyle}>
+                     <p>Asked By:</p> 
+                        </div>
                         <div className="row">
-                        <h5><b>Asked By:</b></h5>
-                                <div className="row">
-                                    <div className="col-2">
-                                    <p className="card-text">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" className="bi bi-person" viewBox="0 0 16 16">
-                                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
-                                     </svg>
-                                     </p>
+                                    <div className="col-3">
+                                  <img src="user.png" style={userImage}></img>
                                     </div>
                                     <div className="col-5">
-                                    <div className="card-text">
                                         <div className="row">
                                             <h5><b>{this.props.data.name}</b></h5>
                                         </div>
@@ -47,14 +89,11 @@ render()
                                                 <h5>1 Question</h5>
                                             </div>
                                         </div>
-                                        </div>
                                     </div>
-                                </div>
-                        </div>  
-                        </div>
-                        </div>
-                    </div>
-            </div>
+                            </div>
+                    </div>  
+             </div>
+    </div>
 )}
  };
 export default QuestionRow;

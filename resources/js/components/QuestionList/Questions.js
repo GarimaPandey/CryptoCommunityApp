@@ -31,18 +31,22 @@ class Questions extends Component {
     }
     render(){
         const myStyle={
-            position:"10px"
+            display:"flex",
+            height:"480px",
+            width:"760px",
+            flexDirection:"column",
+            alignItems:"flex-start",       
+             overFlowY:"auto",
+             paddingTop:"401px",
         }
     return (
-        <div className="container"style={myStyle} >
-        <div className="accordion" id="accordionExample">
-            {
-                this.state.questions.map(function(x,i){
-                    return <QuestionRow key={i} data={x}/>
-                })
-            }   
-        </div>
-    </div>
+            <div style={myStyle}>
+                {
+                    this.state.questions.map(function(x,i){
+                        return <QuestionRow key={i} data={x}/>
+                    })
+                }   
+            </div>
 
         )};
 }

@@ -5,11 +5,26 @@ class Protocol extends Component {
    
     render(){
         const protocolStyle = {
-            paddingBottom:"30px",
+            width:"1120px",
+            height:"242px",
+            topMargin:"96px",
+            leftMargin:"160px",
+            borderRadius:"32px",
+            gap:"10px",
+            position:"absolute",
+            background:"#969696",
+            borderRadius:"32px"
+        }
+        const fontStyle = {
+            width:"233px",
+            height:"49px",
+            marginTop:"10x",
+            marginLeft:"97px"
         }
     return (
-    <div className="container" style={protocolStyle}>
-            <img src="protocol.png" className="img-fluid"/>
+    <div style={protocolStyle}>
+            {/* <img src="protocol.png" className="img-fluid"/> */}
+            <p style={fontStyle}>Near Protocol</p>
     </div>
                
     )};

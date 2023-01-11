@@ -6,8 +6,11 @@ import Expert from '../TopExperts/Experts';
 
 class SideNav extends Component{
     render(){
+        const sideComponentStyle = {
+            paddingTop:"401px",
+        }
         return(
-            <div className="container">
+            <div className="container" style={sideComponentStyle}>
                  <div className="row">
                         <About/>
                     </div>
