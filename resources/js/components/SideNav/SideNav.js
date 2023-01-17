@@ -7,10 +7,11 @@ import Expert from '../TopExperts/Experts';
 class SideNav extends Component{
     render(){
         const sideComponentStyle = {
-            paddingTop:"401px",
+            marginTop:"10px",
+            marginLeft:"17px",
         }
         return(
-            <div className="container" style={sideComponentStyle}>
+            <div className="container">
                  <div className="row">
                         <About/>
                     </div>

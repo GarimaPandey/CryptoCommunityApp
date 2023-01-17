@@ -31,16 +31,15 @@ class Questions extends Component {
     }
     render(){
         const myStyle={
-            display:"flex",
+            // display:"flex",
             height:"480px",
             width:"760px",
-            flexDirection:"column",
-            alignItems:"flex-start",       
-             overFlowY:"auto",
-             paddingTop:"401px",
+            // flexDirection:"column",
+            // alignItems:"flex-start",       
+            //  overFlowY:"auto",
         }
     return (
-            <div style={myStyle}>
+            <div>
                 {
                     this.state.questions.map(function(x,i){
                         return <QuestionRow key={i} data={x}/>

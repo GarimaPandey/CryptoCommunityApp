@@ -9,20 +9,29 @@ import NewQuestion from './QuestionList/NewQuestion';
 import SideNav from './SideNav/SideNav';
 
 function App() {
-    const divStyle={
-        padding:"20px",
-    }
-    return (    
-        <div className="container">
-            <div className="row">
-                <div className="col-14"><NewQuestion/></div>
-            </div>
-           <div className="row">
-                <div className="col-2">
 
-                </div>
-                <div className="col-14" ><Protocol/></div>
-                <div className="col-2"></div>
+    // '@media (max-width: 500px)'= {
+    //     display: 'none',
+    //   }
+
+    const protocolStyle = {
+        alignItem:"center",
+    }
+    const questionStyle = {
+        alignItem:"center", 
+        width:"1440px",
+        backgroundColor:"#1E1E1E",
+    }
+
+    return (  
+        <>
+        <div className="row">
+                <div style={questionStyle}><NewQuestion/></div>
+            </div>  
+        <div className="container">
+            
+           <div className="row">
+                <div style={protocolStyle} className="col-10"><Protocol/></div>
 
             </div>
             <div className="row">
@@ -34,6 +43,7 @@ function App() {
                 </div>
             </div>
         </div>
+        </>
     );
 }
 
